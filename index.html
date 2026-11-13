@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podóloga Marilene Farias | Podologia em Sumaré - SP</title>
+<meta name="description" content="Podóloga Marilene C. Farias em Sumaré - SP. Tratamento a laser, micoses, unhas encravadas, calos, olho de peixe, auriculoterapia, reflexologia podal e atendimento para diabéticos.">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --peach:#F2B07A;
+    --peach-dark:#D98A4E;
+    --peach-soft:#FCE8D6;
+    --cream:#FBF6F0;
+    --rose:#EBD3C9;
+    --ink:#2E2925;
+    --muted:#6F655E;
+    --white:#fff;
+    --wa:#25D366;
+    --radius:22px;
+    --shadow:0 18px 45px -20px rgba(80,50,30,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-weight:300}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+  .container{width:min(1140px,92%);margin:auto}
+  .tag{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--peach-dark);font-weight:500;margin-bottom:.8rem}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.8rem;border-radius:50px;font-weight:500;font-size:.95rem;transition:.3s;cursor:pointer;border:none}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 25px -10px rgba(37,211,102,.7)}
+  .btn-wa:hover{transform:translateY(-3px);background:#1ebe5a}
+  .btn-outline{border:1.5px solid var(--ink);color:var(--ink)}
+  .btn-outline:hover{background:var(--ink);color:#fff}
+  .btn svg{width:20px;height:20px;fill:currentColor}
+  section{padding:100px 0}
+  .section-title{text-align:center;max-width:640px;margin:0 auto 60px}
+  .section-title h2{font-size:clamp(2.2rem,4vw,3rem)}
+  .section-title p{color:var(--muted);margin-top:.8rem}
+
+  /* Header */
+  header{position:fixed;inset:0 0 auto;z-index:50;transition:.3s;padding:18px 0}
+  header.scrolled{background:rgba(251,246,240,.95);backdrop-filter:blur(10px);box-shadow:0 4px 20px -10px rgba(0,0,0,.15);padding:10px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:.7rem}
+  .logo img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff}
+  .logo span{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;line-height:1}
+  .logo small{display:block;font-family:'Poppins';font-size:.62rem;letter-spacing:.35em;color:var(--peach-dark);margin-top:4px}
+  nav ul{display:flex;gap:2rem;list-style:none;align-items:center}
+  nav a{font-size:.9rem;font-weight:400;position:relative}
+  nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--peach);transition:.3s}
+  nav a:not(.btn):hover::after{width:100%}
+  nav .btn{padding:.6rem 1.3rem}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer}
+  .menu-toggle span{display:block;width:26px;height:2px;background:var(--ink);margin:6px 0;transition:.3s}
+
+  /* Hero */
+  .hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;background:
+    radial-gradient(circle at 85% 20%,var(--peach-soft) 0,transparent 45%),
+    radial-gradient(circle at 10% 90%,var(--rose) 0,transparent 35%),var(--cream);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,6vw,4.6rem);margin-bottom:1.2rem}
+  .hero h1 em{color:var(--peach-dark);font-style:italic}
+  .hero p{font-size:1.08rem;color:var(--muted);max-width:520px;margin-bottom:2rem}
+  .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:2.5rem;margin-top:3rem}
+  .hero-stats strong{font-family:'Cormorant Garamond',serif;font-size:2.4rem;display:block;line-height:1;color:var(--ink)}
+  .hero-stats span{font-size:.82rem;color:var(--muted)}
+  .hero-img{position:relative}
+  .hero-img .frame{border-radius:200px 200px var(--radius) var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/4;border:8px solid #fff}
+  .hero-img .frame img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .hero-img::before{content:"";position:absolute;inset:-22px 22px 22px -22px;border:1.5px solid var(--peach);border-radius:200px 200px var(--radius) var(--radius);z-index:-1}
+  .badge{position:absolute;background:#fff;border-radius:16px;padding:.9rem 1.1rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:.7rem;font-size:.85rem}
+  .badge b{display:block;font-weight:600}
+  .badge .ico{width:42px;height:42px;border-radius:50%;background:var(--peach-soft);display:grid;place-items:center;font-size:1.2rem}
+  .badge-1{left:-40px;bottom:70px}
+  .badge-2{right:-20px;top:60px}
+  .stars{color:#F4B400;letter-spacing:2px}
+
+  /* Sobre */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+  .about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .about-imgs img{border-radius:var(--radius);height:420px;width:100%;object-fit:cover;box-shadow:var(--shadow)}
+  .about-imgs img:nth-child(2){margin-top:60px}
+  .about h2{font-size:clamp(2.2rem,4vw,3rem);margin-bottom:1.2rem}
+  .about p{color:var(--muted);margin-bottom:1rem}
+  .checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.5rem;margin:1.6rem 0 2rem}
+  .checks li{display:flex;gap:.6rem;align-items:flex-start;font-size:.93rem}
+  .checks li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--peach);color:#fff;display:grid;place-items:center;font-size:.75rem;font-weight:600;margin-top:2px}
+
+  /* Serviços */
+  .services{background:#fff}
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .card{background:var(--cream);border-radius:var(--radius);padding:2rem 1.6rem;transition:.35s;border:1px solid transparent}
+  .card:hover{transform:translateY(-8px);background:#fff;border-color:var(--peach-soft);box-shadow:var(--shadow)}
+  .card .icon{width:60px;height:60px;border-radius:18px;background:var(--peach-soft);display:grid;place-items:center;font-size:1.7rem;margin-bottom:1.2rem}
+  .card h3{font-size:1.5rem;margin-bottom:.5rem}
+  .card p{font-size:.88rem;color:var(--muted)}
+
+  /* Destaque laser */
+  .highlight{background:linear-gradient(135deg,#3A322C,#2A2420);color:#fff;border-radius:32px;padding:0;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+  .highlight-text{padding:70px 60px}
+  .highlight .tag{color:var(--peach)}
+  .highlight h2{font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:1rem}
+  .highlight p{color:#d8cfc8;margin-bottom:1.8rem}
+  .highlight img{width:100%;height:100%;object-fit:cover;min-height:420px}
+
+  /* Galeria */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:16px}
+  .gallery-grid a{border-radius:18px;overflow:hidden;position:relative}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .gallery-grid a:hover img{transform:scale(1.06)}
+  .gallery-grid a::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 50%);opacity:0;transition:.3s}
+  .gallery-grid a:hover::after{opacity:1}
+  .g-tall{grid-row:span 2}
+  .insta-cta{text-align:center;margin-top:40px}
+
+  /* Depoimento */
+  .testimonial{background:var(--peach-soft);text-align:center}
+  .quote{max-width:760px;margin:auto}
+  .quote .mark{font-family:'Cormorant Garamond',serif;font-size:6rem;line-height:.5;color:var(--peach-dark)}
+  .quote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-style:italic;margin:1.2rem 0 1.4rem;line-height:1.35}
+  .quote cite{font-style:normal;font-weight:500}
+  .quote cite small{display:block;color:var(--muted);font-weight:300;font-size:.82rem}
+  .g-rating{display:inline-flex;align-items:center;gap:.6rem;background:#fff;border-radius:50px;padding:.5rem 1.2rem;margin-top:1.8rem;font-size:.88rem;box-shadow:0 8px 20px -12px rgba(0,0,0,.25)}
+
+  /* Contato */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:stretch}
+  .info{background:#fff;border-radius:var(--radius);padding:2.6rem;box-shadow:var(--shadow)}
+  .info-item{display:flex;gap:1rem;padding:1.1rem 0;border-bottom:1px solid #f0e6dd}
+  .info-item:last-of-type{border:none}
+  .info-item .ico{flex:none;width:46px;height:46px;border-radius:14px;background:var(--peach-soft);display:grid;place-items:center;font-size:1.2rem}
+  .info-item h4{font-weight:500;font-size:.95rem}
+  .info-item p,.info-item a{color:var(--muted);font-size:.9rem}
+  .hours{width:100%;font-size:.88rem;color:var(--muted);margin-top:.3rem}
+  .hours td{padding:2px 0}
+  .hours td:last-child{text-align:right;color:var(--ink);font-weight:400}
+  .map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:440px}
+  .map iframe{width:100%;height:100%;border:0;min-height:440px}
+
+  /* Footer */
+  footer{background:var(--ink);color:#cfc5bd;padding:60px 0 30px;font-size:.88rem}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot .logo span{color:#fff}
+  .socials{display:flex;gap:.8rem}
+  .socials a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:.3s}
+  .socials a:hover{background:var(--peach);border-color:var(--peach)}
+  .socials svg{width:19px;height:19px;fill:#fff}
+  .copy{text-align:center;padding-top:25px;font-size:.8rem}
+
+  /* WhatsApp flutuante */
+  .wa-float{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;z-index:60;box-shadow:0 10px 30px -8px rgba(37,211,102,.8);animation:pulse 2.4s infinite}
+  .wa-float svg{width:32px;height:32px;fill:#fff}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  /* Animação */
+  .reveal{opacity:0;transform:translateY(35px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.show{opacity:1;transform:none}
+
+  /* Responsivo */
+  @media(max-width:1000px){
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:860px){
+    section{padding:75px 0}
+    .menu-toggle{display:block;z-index:70}
+    nav ul{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:2rem;font-size:1.2rem;transform:translateX(100%);transition:.4s}
+    nav ul.open{transform:none}
+    .menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+    .menu-toggle.open span:nth-child(2){opacity:0}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+    .hero-grid,.about-grid,.contact-grid,.highlight{grid-template-columns:1fr}
+    .hero{text-align:center}
+    .hero p{margin-inline:auto}
+    .hero-btns,.hero-stats{justify-content:center}
+    .hero-img{max-width:380px;margin:auto}
+    .badge-1{left:-10px}.badge-2{right:-10px}
+    .about-imgs img{height:300px}
+    .highlight-text{padding:50px 30px}
+    .highlight img{min-height:320px;max-height:420px}
+  }
+  @media(max-width:560px){
+    .services-grid{grid-template-columns:1fr}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+    .checks{grid-template-columns:1fr}
+    .hero-stats{gap:1.5rem}
+    .badge{font-size:.75rem;padding:.6rem .8rem}
+    .badge .ico{width:34px;height:34px}
+    .info{padding:1.8rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="container nav">
+    <a href="#inicio" class="logo">
+      <img src="img/icone.png" alt="Logo Marilene Farias Podologia">
+      <span>Marilene Farias<small>PODOLOGIA</small></span>
+    </a>
+    <nav>
+      <ul id="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener" class="btn btn-wa">Agendar</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="tag">Podóloga em Sumaré - SP</span>
+      <h1>Cuidado e saúde <em>para os seus pés</em></h1>
+      <p>Atendimento humanizado, delicado e com técnicas modernas para tratar micoses, unhas encravadas, calos e muito mais. Seus pés merecem atenção profissional.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener" class="btn btn-wa">
+          <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.2 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.6-8.4z"/></svg>
+          Agende pelo WhatsApp
+        </a>
+        <a href="#servicos" class="btn btn-outline">Conheça os tratamentos</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>+10</strong><span>anos de experiência</span></div>
+        <div><strong>5,0</strong><span>nota no Google</span></div>
+        <div><strong>8</strong><span>especialidades</span></div>
+      </div>
+    </div>
+    <div class="hero-img reveal">
+      <div class="frame"><img src="img/marilene.jpg" alt="Podóloga Marilene Farias em seu consultório"></div>
+      <div class="badge badge-1"><div class="ico">💡</div><div><b>Tratamento a Laser</b>para micoses</div></div>
+      <div class="badge badge-2"><div class="ico">⭐</div><div><b class="stars">★★★★★</b>Avaliação 5,0</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about" id="sobre">
+  <div class="container about-grid">
+    <div class="about-imgs reveal">
+      <img src="img/atendimento-1.jpg" alt="Marilene realizando atendimento podológico">
+      <img src="img/laser.jpg" alt="Tratamento a laser nos pés">
+    </div>
+    <div class="reveal">
+      <span class="tag">Sobre mim</span>
+      <h2>Olá, eu sou a Marilene C. Farias</h2>
+      <p>Sou podóloga e há mais de 10 anos dedico meu trabalho à saúde e ao bem-estar dos pés. Acredito que cada atendimento deve ser feito com carinho, delicadeza e muita responsabilidade.</p>
+      <p>No meu espaço, localizado no Star Bella em Sumaré, você encontra um ambiente acolhedor, materiais esterilizados e tratamentos modernos, como o laser para micoses, sempre com foco no seu conforto.</p>
+      <ul class="checks">
+        <li>Atendimento humanizado</li>
+        <li>Materiais esterilizados</li>
+        <li>Tecnologia a laser</li>
+        <li>Cuidado especial a diabéticos</li>
+      </ul>
+      <a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener" class="btn btn-wa">Quero agendar uma avaliação</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="tag">Tratamentos</span>
+      <h2>Como posso cuidar de você</h2>
+      <p>Tratamentos completos para devolver a saúde, o conforto e a beleza dos seus pés.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card reveal"><div class="icon">💡</div><h3>Tratamento a Laser</h3><p>Tecnologia moderna e indolor que auxilia no combate a fungos e na recuperação das unhas.</p></div>
+      <div class="card reveal"><div class="icon">🦶</div><h3>Micoses</h3><p>Tratamento de micoses de unha e pele, com acompanhamento até a recuperação completa.</p></div>
+      <div class="card reveal"><div class="icon">💅</div><h3>Unhas Encravadas</h3><p>Alívio rápido da dor com técnicas seguras e orientações para evitar que volte a acontecer.</p></div>
+      <div class="card reveal"><div class="icon">✨</div><h3>Calos e Calosidades</h3><p>Remoção cuidadosa de calos e áreas espessas, deixando os pés macios e confortáveis.</p></div>
+      <div class="card reveal"><div class="icon">🎯</div><h3>Olho de Peixe</h3><p>Tratamento da verruga plantar com técnicas adequadas e acompanhamento profissional.</p></div>
+      <div class="card reveal"><div class="icon">🌿</div><h3>Auriculoterapia</h3><p>Terapia complementar por pontos na orelha que ajuda no equilíbrio, ansiedade e dores.</p></div>
+      <div class="card reveal"><div class="icon">🌸</div><h3>Reflexologia Podal</h3><p>Massagem terapêutica nos pés que promove relaxamento e bem-estar para todo o corpo.</p></div>
+      <div class="card reveal"><div class="icon">💙</div><h3>Pés Diabéticos</h3><p>Atendimento especializado e preventivo, com todo cuidado que o pé diabético exige.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTAQUE -->
+<section>
+  <div class="container">
+    <div class="highlight reveal">
+      <div class="highlight-text">
+        <span class="tag">Micose não é só estética</span>
+        <h2>Um inimigo invisível que destrói suas unhas</h2>
+        <p>A micose começa silenciosa, com um leve amarelado ou uma unha mais grossa. Quanto antes ela for tratada por um profissional, mais rápido e eficaz será o resultado. Evite soluções caseiras e procure ajuda especializada.</p>
+        <a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener" class="btn btn-wa">Quero tratar minhas unhas</a>
+      </div>
+      <img src="img/atendimento-2.jpg" alt="Atendimento podológico">
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" style="padding-top:20px">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="tag">@podologamarilene</span>
+      <h2>Um pouco do meu dia a dia</h2>
+      <p>Acompanhe dicas, tratamentos e novidades no Instagram.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener" class="g-tall"><img src="img/terapia.jpg" alt="Reflexologia podal"></a>
+      <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener"><img src="img/micose.jpg" alt="Post sobre micose"></a>
+      <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener" class="g-tall"><img src="img/consultorio.jpg" alt="Consultório"></a>
+      <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener"><img src="img/pele.jpg" alt="Post sobre pele dos pés"></a>
+      <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener"><img src="img/dica.jpg" alt="Dica do dia"></a>
+      <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener"><img src="img/laser.jpg" alt="Tratamento a laser"></a>
+    </div>
+    <div class="insta-cta reveal">
+      <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener" class="btn btn-outline">Seguir no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTO -->
+<section class="testimonial">
+  <div class="container quote reveal">
+    <div class="mark">“</div>
+    <blockquote>Excelente profissional. Já fui atendida por ela 3 vezes, e foi incrível. Além de ser muito gentil e delicada.</blockquote>
+    <cite>Cintia<small>Avaliação no Google</small></cite>
+    <div><span class="g-rating"><b>5,0</b> <span class="stars">★★★★★</span> no Google</span></div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="tag">Contato</span>
+      <h2>Agende seu horário</h2>
+      <p>Fale comigo pelo WhatsApp e encontre o melhor horário para você.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="info reveal">
+        <div class="info-item"><div class="ico">📍</div><div><h4>Endereço</h4><p>Star Bella - Rua José Vedovatto, 751<br>Parque das Nações (Nova Veneza)<br>Sumaré - SP, 13181-250</p></div></div>
+        <div class="info-item"><div class="ico">📱</div><div><h4>WhatsApp / Telefone</h4><a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener">(19) 99241-6378</a></div></div>
+        <div class="info-item"><div class="ico">🕘</div><div style="flex:1"><h4>Horário de atendimento</h4>
+          <table class="hours">
+            <tr><td>Segunda a sexta</td><td>09:00 – 17:00</td></tr>
+            <tr><td>Sábado</td><td>09:00 – 15:00</td></tr>
+            <tr><td>Domingo</td><td>Fechado</td></tr>
+          </table></div></div>
+        <a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:1rem">Chamar no WhatsApp</a>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=Pod%C3%B3loga+Marilene+Farias+Sumar%C3%A9-+SP&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa - Podóloga Marilene Farias"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot">
+      <a href="#inicio" class="logo"><img src="img/icone.png" alt="Logo"><span>Marilene Farias<small>PODOLOGIA</small></span></a>
+      <p>Saúde, cuidado e bem-estar para os seus pés.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/podologamarilene/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+        <a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.2 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.6-8.4z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">© <span id="ano"></span> Podóloga Marilene C. Farias · Sumaré - SP<br>Feito por <a href="https://www.instagram.com/synogconnect/" target="_blank" rel="noopener" style="color:var(--peach);font-weight:500">@Synogconnect</a></p>
+  </div>
+</footer>
+
+<a href="https://wa.me/message/EL4DA5XXINRWO1" target="_blank" rel="noopener" class="wa-float" aria-label="Fale no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.2 1.3 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.6-8.4z"/></svg>
+</a>
+
+<script>
+  const header=document.getElementById('header');
+  addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40));
+  const toggle=document.getElementById('toggle'),menu=document.getElementById('menu');
+  toggle.onclick=()=>{menu.classList.toggle('open');toggle.classList.toggle('open')};
+  menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.classList.remove('open');toggle.classList.remove('open')});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('ano').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
